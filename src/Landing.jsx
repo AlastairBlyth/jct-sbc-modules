@@ -465,6 +465,10 @@ export default function Landing() {
                   </div>
                 </div>
               </Link>
+            </div>     ← closes the grid div
+          </div>       ← closes the assistants section div
+
+          {/* ─── FOOTER NOTE ─── */}
 
           {/* ─── FOOTER NOTE ─── */}
           <div style={{
