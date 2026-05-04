@@ -4,6 +4,7 @@ import Module1 from "./modules/Module1_Introduction";
 import Module3 from "./modules/Module3_ContractAdministrator";
 import Module6 from "./modules/Module6_Payment";
 import PaymentAssistant from "./modules/PaymentAssistant";
+import CAAssistant from "./modules/CAAssistant";
 import Sim1 from "./simulators/Sim1_ContractSelection";
 import Sim3 from "./simulators/Sim3_ContractAdministrator";
 import Sim6 from "./simulators/Sim6_Payment";
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/simulator/3" element={<Sim3 />} />
         <Route path="/simulator/6" element={<Sim6 />} />
         <Route path="/assistant/payment" element={<PaymentAssistant />} />
+        <Route path="/assistant/ca" element={<CAAssistant />} />
       </Routes>
     </BrowserRouter>
   );

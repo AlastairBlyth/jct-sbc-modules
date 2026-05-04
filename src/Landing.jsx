@@ -433,29 +433,38 @@ export default function Landing() {
                   </div>
                 </div>
               </Link>
-              {/* Placeholder for future assistants */}
-              <div>
+              <Link to="/assistant/ca" style={{ textDecoration: "none", color: "inherit" }}
+                onMouseEnter={(e) => { e.currentTarget.firstChild.style.transform = "translateY(-3px)"; e.currentTarget.firstChild.style.boxShadow = "0 6px 24px rgba(15,42,68,0.12)"; }}
+                onMouseLeave={(e) => { e.currentTarget.firstChild.style.transform = "translateY(0)"; e.currentTarget.firstChild.style.boxShadow = P.shadow; }}
+              >
                 <div style={{
-                  background: P.white,
+                  background: P.navy,
                   borderRadius: 14,
-                  border: "1px solid #eaeaea",
                   padding: "28px 24px 24px",
-                  opacity: 0.55,
+                  boxShadow: P.shadow,
+                  transition: "transform 0.15s, box-shadow 0.15s",
+                  cursor: "pointer",
                 }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
-                    <span style={{ fontSize: 28 }}>🔧</span>
-                    <span style={{ fontSize: 11, fontWeight: 600, textTransform: "uppercase", letterSpacing: 1, color: P.textLight }}>Coming soon</span>
+                    <span style={{ fontSize: 28 }}>⚖️</span>
+                    <span style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 1, color: P.gold }}>Available</span>
                   </div>
-                  <h3 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 18, fontWeight: 700, color: P.navy, margin: "0 0 6px" }}>
+                  <h3 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 18, fontWeight: 700, color: P.white, margin: "0 0 6px" }}>
                     Contract Administrator Assistant
                   </h3>
-                  <p style={{ fontSize: 14, color: P.textMid, margin: 0, lineHeight: 1.5 }}>
-                    Instruction drafter, EOT decision helper, Practical Completion assessor, and certification tracker.
+                  <p style={{ fontSize: 14, color: "rgba(255,255,255,0.6)", margin: "0 0 16px", lineHeight: 1.5 }}>
+                    Instruction drafter, EOT decision helper, Practical Completion assessor, certification tracker, and AI situation advisor.
                   </p>
+                  <div style={{ borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: 14 }}>
+                    {["Instruction Drafter", "EOT Decision Helper", "PC Assessor", "Certification Tracker", "AI Situation Advisor"].map((s, i) => (
+                      <div key={i} style={{ fontSize: 13, color: "rgba(255,255,255,0.5)", padding: "3px 0", display: "flex", alignItems: "center", gap: 8 }}>
+                        <span style={{ width: 5, height: 5, borderRadius: "50%", background: i === 4 ? P.gold : P.tealLight, flexShrink: 0 }} />
+                        {s}
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
+              </Link>
 
           {/* ─── FOOTER NOTE ─── */}
           <div style={{
